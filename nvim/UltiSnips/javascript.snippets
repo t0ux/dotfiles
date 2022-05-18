@@ -1,0 +1,101 @@
+snippet cl "console.log" b
+console.log($1);
+endsnippet
+
+snippet ce "console.error" b
+console.error($1);
+endsnippet
+
+snippet ct "console.table" b
+console.table($1)
+endsnippet
+
+snippet impd "import File from './File'" b
+import $1 from '${2:./}${3:$1}'
+endsnippet
+
+snippet exp "export { default } from './CurrentFolderName'"
+export { default } from './${1:`!v expand('%:p:h:t')`}'
+endsnippet
+
+snippet fn "normal function declaration"
+function $1($2) {$3};
+endsnippet
+
+snippet asfn "async fn declaration"
+async function $1($2) {$3};
+endsnippet
+
+snippet afn "arrow fn declaration"
+const $1 = ($2) => {$3};
+endsnippet
+
+snippet asafn "async arrow fn declaration"
+const $1 = async ($2) => {$3};
+endsnippet
+
+snippet if "if statement" 
+if ($1) {
+	$2
+}
+endsnippet
+
+snippet ifelse "if statement"
+if ($1) {
+	$2
+} else {
+	$3
+}
+endsnippet
+
+snippet switch "switch statement" 
+switch ($1) {
+	case "$2":
+	$4
+	break;
+
+	default:
+	$4
+}
+endsnippet
+
+
+
+# -------- REACT ----------
+
+snippet rfc "React function component" 
+import React from 'react'
+
+const ${1:`!v expand('%:t:r')`} = props => {
+	return null$0
+}
+
+export default $1
+endsnippet
+
+snippet rcc "React class component" 
+import React, { Component } from 'react'
+
+export default class ${1:`!v expand('%:t:r')`} extends Component {
+	constructor(props) {
+		super(props)
+
+		this.state = {}
+	}
+
+	render() {
+		return null$0
+	}
+}
+endsnippet
+
+snippet sta "useState"
+const [$1, $2] = useState($3)
+endsnippet
+
+
+snippet eff "useEffect"
+useEffect(() => {
+	$1
+}, [$2])
+endsnippet
