@@ -68,12 +68,9 @@ return function(client)
   --         end,
   --     })
   -- end
-
-  vim.cmd[[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()]]
-
--- if client.resolved_capabilities.document_formatting then
---   vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()")
--- end
-
+  
+  -- vim.cmd below uses all language servers to format (?) 
+  -- // without _seq it'll prompt for which formatter you wanna use (not sure why)
+  vim.cmd[[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()]] 
 end
 
