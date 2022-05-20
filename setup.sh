@@ -3,6 +3,9 @@
 # Install xcode command-line tools
 xcode-select --install
 
+# Install shell formatter
+curl -sS https://webinstall.dev/shfmt | bash # shfmt (works with null-ls too!)
+
 # Make sure we’re using the latest Homebrew
 brew update
 brew upgrade
@@ -16,12 +19,12 @@ brew install gnu-sed --with-default-names
 # Install more recent versions of some OS X tools
 brew install neovim
 brew install ripgrep
-brew install tmux 
+brew install tmux
 brew install tree-sitter
 
-# packer.nvim for neovim plugin managing 
+# packer.nvim for neovim plugin managing
 # git clone --depth 1 https://github.com/wbthomason/packer.nvim\
- # ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+# ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 
 # Install other useful binaries
 brew install ffmpeg --with-libvpx
@@ -35,7 +38,7 @@ brew install awscli
 brew install gh
 brew install openssl
 
-# language servers 
+# language servers
 brew install cppcheck
 brew install clang-format
 brew install golangci-lint

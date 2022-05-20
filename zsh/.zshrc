@@ -35,6 +35,10 @@ plugins=(zsh-autosuggestions)
 ### +++++++ ADD COSTUMS BELOW ++++++++ ###
 #########################################
 
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+export PATH="/Users/toux/.local/bin:$PATH"
+export PATH="~/.local/share/nvim/lsp_servers/sumneko_lua/extension/server/bin/lua-language-server:$PATH"
+
 # Golang
 export GOPATH=$HOME/go
 export GOROOT=/usr/local/go
@@ -55,8 +59,13 @@ alias dl="cd ~/Downloads"
 alias dots="cd ~/dotfiles"
 alias vi="nvim"
 alias she="vi ~/dotfiles/zsh/.zshrc"
+alias kit="vi ~/dotfiles/kitty.conf"
 alias nvi="vi ~/dotfiles/nvim"
 alias tmu="vi ~/dotfiles/.tmux.conf"
 alias x="exit"
 
-echo "___/// .zshrc reloaded ///___"
+echo "[+] .zshrc configuration loaded [+]"
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+

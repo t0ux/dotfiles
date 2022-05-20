@@ -1,6 +1,7 @@
 local formatting = require("null-ls").builtins.formatting 
 local diagnostics = require("null-ls").builtins.diagnostics
 -- local completion = require("null-ls").builtins.completion
+local codeactions = require("null-ls").builtins.code_actions
 
 
 require("null-ls").setup({
@@ -20,13 +21,15 @@ require("null-ls").setup({
     -- end,
 sources = {
 		formatting.stylua, -- formatter for lua
-		formatting.prettier, -- js, ts, css, html formatter
+		formatting.prettier.with({extra_args = {"--single-quote", "--jsx-single-quote"}}), -- js, ts, css, html formatter
 		formatting.gofmt, -- go formatter
 		formatting.clang_format, -- c++/c formatter
 		formatting.black, -- python3 formatter
+		formatting.shfmt, -- shell formatter (works with bash)
     diagnostics.eslint,  -- js, ts, css, html linter
 	  diagnostics.golangci_lint, -- go linter
 	  diagnostics.cppcheck, -- cpp/c diagnostics/lint
 	  diagnostics.flake8, -- python3 linter - style guide enforcement
+    codeactions.gitsigns,
 	},
 })
