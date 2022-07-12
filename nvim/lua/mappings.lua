@@ -2,6 +2,10 @@ local map = vim.api.nvim_set_keymap
 map("n", "<c-s>", ":w<CR>", { noremap = true })
 map("i", "<c-s>", "<Esc>:w<CR>a", { noremap = true })
 
+--floaterm
+map("n", "<C-g>i", ":FloatermNew --height=1.0 --width=1.0 --wintype=float lazygit<CR>", { noremap = true })
+map("n", "<C-g>n", ":FloatermNew<CR>", { noremap = true })
+
 -- :vertical resize w<CRw<CR>>+5
 -- :vertical resize -5
 -- resize windows
@@ -9,6 +13,14 @@ map("n", "<C-w><", ":vertical resize -5<CR>", { noremap = true })
 map("n", "<C-w>>", ":vertical resize +5<CR>", { noremap = true })
 map("n", "<C-w>+", ":resize +5<CR>", { noremap = true })
 map("n", "<C-w>_", ":resize -5<CR>", { noremap = true })
+
+-- move lines up down
+map("n", "<M-j>", ":m .+1<CR>==", { noremap = true })
+map("n", "<M-k>", ":m .-2<CR>==", { noremap = true })
+
+map("v", "<M-j>", ":m '>+<CR>gv=gv", { noremap = true })
+map("v", "<M-k>", ":m .-2<CR>gv=gv", { noremap = true })
+
 
 -- map leader to space
 vim.g.mapleader = " "
@@ -88,3 +100,4 @@ map('n', '<leader>dco', '<cmd>lua require"telescope".extensions.dap.configuratio
 map('n', '<leader>dlb', '<cmd>lua require"telescope".extensions.dap.list_breakpoints{}<CR>', { noremap = true })
 map('n', '<leader>dv', '<cmd>lua require"telescope".extensions.dap.variables{}<CR>', { noremap = true })
 map('n', '<leader>df', '<cmd>lua require"telescope".extensions.dap.frames{}<CR>', { noremap = true })
+

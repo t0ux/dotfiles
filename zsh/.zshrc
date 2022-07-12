@@ -63,7 +63,18 @@ alias kit="vi ~/dotfiles/kitty.conf"
 alias nvi="vi ~/dotfiles/nvim"
 alias tmu="vi ~/dotfiles/.tmux.conf"
 alias x="exit"
+alias gco="git checkout"
+alias gc="git commit"
+alias ga="git add"
+alias gp="git push"
 
+echo "
+████████╗░█████╗░██╗░░░██╗██╗░░██╗
+╚══██╔══╝██╔══██╗██║░░░██║╚██╗██╔╝
+░░░██║░░░██║░░██║██║░░░██║░╚███╔╝░
+░░░██║░░░██║░░██║██║░░░██║░██╔██╗░
+░░░██║░░░╚█████╔╝╚██████╔╝██╔╝╚██╗
+░░░╚═╝░░░░╚════╝░░╚═════╝░╚═╝░░╚═╝"
 echo "[+] .zshrc configuration loaded [+]"
 
 # Generated for envman. Do not edit.

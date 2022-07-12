@@ -60,7 +60,7 @@ require("telescope").setup({
 	},
 	pickers = {
 		find_files = {
-			theme = "dropdown", -- used ivy before
+			theme = "ivy", -- used ivy before
       hidden = true
 		},
 		git_files = {

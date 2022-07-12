@@ -12,22 +12,15 @@ require("packer").startup(function(use)
 		end,
 	})
 
-	-- theme
-	-- use({
-	-- 	"jacoborus/tender.vim",
-	-- 	config = function()
-	-- 		require("plugins/theme")
-	-- 	end,
-	-- })
-
 	use({
-		"ntk148v/vim-horizon",
+		"EdenEast/nightfox.nvim",
 		config = function()
 			require("plugins/theme")
 		end,
 	})
 
-	use({
+
+  use({
 		"gruvbox-community/gruvbox",
 		config = function()
 			require("plugins/theme")
@@ -36,13 +29,6 @@ require("packer").startup(function(use)
 
 	use({
 		"ful1e5/onedark.nvim",
-		config = function()
-			require("plugins/theme")
-		end,
-	})
-
-use({
-		"codicocodes/tokyonight.nvim",
 		config = function()
 			require("plugins/theme")
 		end,
@@ -57,6 +43,13 @@ use({
 		end,
 	})
 
+  -- floaterm
+  use({
+    "voldikss/vim-floaterm",
+    config = function() 
+      require("plugins/floaterm")
+    end,
+  })
 
 	-- language server protocol
 	use({
@@ -181,11 +174,12 @@ use({
 	})
 
 	-- bufferline
-	-- use({
-	-- 	"akinsho/bufferline.nvim",
-	-- 	config = function()
-	-- 		require("plugins/bufferline")
-	-- 	end,
-	-- 	requires = "kyazdani42/nvim-web-devicons",
-	-- })
+	use({
+		"akinsho/bufferline.nvim",
+		requires = "kyazdani42/nvim-web-devicons",
+		config = function()
+			require("plugins/bufferline")
+		end,
+	})
+
 end)
