@@ -9,19 +9,23 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagn
 })
 
 vim.fn.sign_define("LspDiagnosticsSignError", {
-	text = "✖",
+	-- text = "✖",
+	text = "E",
 	numhl = "LspDiagnosticsDefaultError",
 })
 vim.fn.sign_define("LspDiagnosticsSignWarning", {
-	text = "▲",
+	-- text = "▲",
+	text = "W",
 	numhl = "LspDiagnosticsDefaultWarning",
 })
 vim.fn.sign_define("LspDiagnosticsSignInformation", {
-	text = "●",
+	-- text = "●",
+	text = "I",
 	numhl = "LspDiagnosticsDefaultInformation",
 })
 vim.fn.sign_define("LspDiagnosticsSignHint", {
-	text = "✱",
+	-- text = "✱",
+	text = "H",
 	numhl = "LspDiagnosticsDefaultHint",
 })
 
