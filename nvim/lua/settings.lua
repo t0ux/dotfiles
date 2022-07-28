@@ -23,6 +23,7 @@ set.scrolloff = 8
 set.errorbells = false
 set.ruler = true
 -- set.signcolumn = "no"
+set.signcolumn = "yes"
 set.clipboard = "unnamedplus"
 set.breakindent = true -- keep indentation when lines break
 set.breakindentopt = "shift:2" -- but shift it by 2 spaces
@@ -41,7 +42,7 @@ set.fileencoding = "utf-8"
 set.autoread = true
 set.visualbell = true
 -- set.cursorcolumn = true
--- set.cursorline = true
+set.cursorline = true
 
 -- highlight on yank
 vim.cmd('au TextYankPost * silent! lua vim.highlight.on_yank({ higroup = "IncSearch", timeout = 150 })')

@@ -15,11 +15,11 @@ map("n", "<C-w>+", ":resize +5<CR>", { noremap = true })
 map("n", "<C-w>_", ":resize -5<CR>", { noremap = true })
 
 -- move lines up down
-map("n", "<M-j>", ":m .+1<CR>==", { noremap = true })
-map("n", "<M-k>", ":m .-2<CR>==", { noremap = true })
+map("n", "<S-n>", ":m .-2<CR>==", { noremap = true })
+map("n", "<S-m>", ":m .+1<CR>==", { noremap = true })
 
-map("v", "<M-j>", ":m '>+<CR>gv=gv", { noremap = true })
-map("v", "<M-k>", ":m .-2<CR>gv=gv", { noremap = true })
+map("v", "<S-n>", ":m '>+<CR>gv=gv", { noremap = true })
+map("v", "<S-m>", ":m .-2<CR>gv=gv", { noremap = true })
 
 
 -- map leader to space

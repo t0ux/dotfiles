@@ -21,14 +21,14 @@ require("packer").startup(function(use)
 
 
   use({
-		"gruvbox-community/gruvbox",
+		"codicocodes/tokyonight.nvim",
 		config = function()
 			require("plugins/theme")
 		end,
 	})
 
 	use({
-		"ful1e5/onedark.nvim",
+		"sainnhe/sonokai",
 		config = function()
 			require("plugins/theme")
 		end,
